@@ -5,6 +5,11 @@ from main_config import get_price, money
 app = FastAPI()
 
 
+@app.get("/")
+def hello():
+    return "Hello World!"
+
+
 @app.get("/price")
 def show_price() -> float:
     return get_price()
