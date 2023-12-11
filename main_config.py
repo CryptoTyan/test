@@ -24,8 +24,8 @@ def money(symbol="TUSD"):
 	try:
 		return float(client.get_asset_balance(asset=symbol).get("free"))
 	except:
-		sleep(1)
-		return money(symbol)
+		return "Error"
+
 
 def get_price(symbol="BTCTUSD"):
 	try:
