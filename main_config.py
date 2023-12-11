@@ -23,8 +23,8 @@ interest = 1.003
 def money(symbol="TUSD"):
 	try:
 		return float(client.get_asset_balance(asset=symbol).get("free"))
-	except:
-		return "Error"
+	except Exception as e:
+		return e
 
 
 def get_price(symbol="BTCTUSD"):
