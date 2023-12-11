@@ -16,7 +16,7 @@ def show_price() -> float:
 
 
 @app.get("/money")
-def show_money() -> float | Exception:
+def show_money() -> float:
     return money()
 
 
