@@ -22,12 +22,12 @@ def show_money() -> float:
 
 
 @app.get("/ip")
-def get_public_ip():
+def get_public_ipv4():
     try:
-        response = requests.get('https://api64.ipify.org?format=json')
+        response = requests.get('https://httpbin.org/ip')
         ip_data = response.json()
-        public_ip = ip_data['ip']
-        return public_ip
+        public_ipv4 = ip_data['origin']
+        return public_ipv4
     except Exception as e:
         return f"Помилка: {e}"
 
