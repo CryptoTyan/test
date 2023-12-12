@@ -32,6 +32,16 @@ def get_public_ipv4():
         return f"Помилка: {e}"
 
 
+@app.get("/info")
+def info():
+    return {
+        "name": "Basiliy Pupckin",
+        "user_name": "Nagibator_3000",
+        "phon_number": "+38 123 45 67",
+        "money": "999999.99"
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
